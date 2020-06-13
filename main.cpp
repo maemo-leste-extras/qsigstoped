@@ -9,6 +9,7 @@
 #include <QDebug>
 #include <sys/types.h>
 #include <signal.h>
+#include <QOpenGLContext>
 
 #include "desktopfile.h"
 
@@ -38,6 +39,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    qDebug()<<(QOpenGLContext::openGLModuleType() == QOpenGLContext::LibGLES ? "Using OpenGL|ES" : "Using OpenGL");
     pid_t sigstopedPid;
     QString pidfileName(QDir::home().path() + "/.config/sigstoped/pidfile");
     QFile pidfile(pidfileName);
