@@ -14,5 +14,6 @@ Multi-arch: same
 Depends:
  libqt5gui5,
  libqt5core5a,
+ sigstoped,
 Description: An application to configure the qsigstoped deamon
 
