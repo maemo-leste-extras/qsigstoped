@@ -1,0 +1,18 @@
+Source: qsigstoped
+Section: base
+Priority: optional
+Maintainer: Uvos <carl@uvos.xyz>
+Build-Depends:
+ debhelper,
+ qt5-qmake,
+ qt5-default,
+Standards-Version: 1.0
+
+Package: qsigstoped
+Architecture: any
+Multi-arch: same
+Depends:
+ libqt5gui5,
+ libqt5core5a,
+Description: An application to configure the qsigstoped deamon
+
