@@ -57,10 +57,16 @@ int main(int argc, char *argv[])
         pidfile.close();
     }
 
-    QList<QByteArray> desktopFileDirs = qgetenv("XDG_DATA_DIRS").split(':');
+    QString xdgDataDirs = qgetenv("XDG_DATA_DIRS");
+    if(xdgDataDirs.isEmpty()) 
+    {
+        qDebug()<<"XDG_DATA_DIRS not set\n";
+        xdgDataDirs =  "/usr/local/share/:/usr/share/";
+    }
+    xdgDataDirs.remove('\"');
+    QList<QByteArray> desktopFileDirs = xdgDataDirs.toUtf8().split(':');
     qDebug()<<"Looking for .desktop files in:";
     for(int i = 0; i < desktopFileDirs.size(); ++i) qDebug()<<QString(desktopFileDirs[i]);
-    if(desktopFileDirs.size() == 0) QMessageBox::critical(nullptr, "Error", "XDG_DATA_DIRS must be set" );
 
     QFile blacklist(QDir::home().path() + "/.config/sigstoped/blacklist");
     blacklist.open(QIODevice::ReadOnly);
