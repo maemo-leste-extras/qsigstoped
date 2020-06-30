@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     {
         qDebug()<<QDir::home().path() + "/.config/sigstoped/pidfile";
         QMessageBox::critical(nullptr, "Error", "The sigstoped deamon must be running" );
-        return 1;
+        //return 1;
     }
     else
     {
