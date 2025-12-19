@@ -4,8 +4,9 @@ Priority: optional
 Maintainer: Uvos <carl@uvos.xyz>
 Build-Depends:
  debhelper,
+ qtbase5-dev,
+ qtbase5-dev-tools,
  qt5-qmake,
- qt5-default,
 Standards-Version: 3.7.2
 
 Package: qsigstoped

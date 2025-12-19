@@ -1,3 +1,7 @@
+qsigstoped (1.0.4) unstable; urgency=medium
+  debian/control: update deps for daedalus and excalibur
+ -- Sander <code@kroket.io>  Fri, 19 Dec 2025 09:00:00 +0100
+
 qsigstoped (1.0.3) unstable; urgency=medium
   Truncate applications names properly
  -- Uvos <devnull@uvos.xyz>  Mon, 30 Jun 2020 15:00:00 +0100
