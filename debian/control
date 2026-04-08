@@ -13,8 +13,8 @@ Package: qsigstoped
 Architecture: any
 Multi-arch: same
 Depends:
- libqt5gui5,
- libqt5core5a,
+ libqt5gui5t64,
+ libqt5core5t64,
  sigstoped,
 Description: An application to configure the qsigstoped deamon
 XB-Maemo-Display-Name: QSigstoped
